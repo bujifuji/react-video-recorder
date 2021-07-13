@@ -783,10 +783,10 @@ export default class VideoRecorder extends Component {
 
     if (isCameraOn) {
       // Enable switch camera button, only if not recording and multiple video sources available
-      const switchCameraControl =
-        availableDeviceIds && availableDeviceIds.length >= 1 && !isRecording ? (
-          <SwitchCameraView onClick={this.handleSwitchCamera} />
-        ) : null
+      // const switchCameraControl =
+      //   availableDeviceIds && availableDeviceIds.length >= 1 && !isRecording ? (
+      //     <SwitchCameraView onClick={this.handleSwitchCamera} />
+      //   ) : null
 
       return (
         <CameraView key='camera'>
@@ -797,7 +797,6 @@ export default class VideoRecorder extends Component {
             muted
             playsInline
           />
-          {switchCameraControl}
         </CameraView>
       )
     }
